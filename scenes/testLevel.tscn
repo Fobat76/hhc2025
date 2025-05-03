@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cwx5v3f6ysipn"]
 
-[ext_resource type="PackedScene" uid="uid://by4xf6y0x5eoo" path="res://scenes/metal_can.tscn" id="1_bgqi4"]
+[ext_resource type="PackedScene" uid="uid://by4xf6y0x5eoo" path="res://scenes/Items/metal_can.tscn" id="1_bgqi4"]
 [ext_resource type="PackedScene" uid="uid://b5fm3lh0o36ox" path="res://scenes/Player/player.tscn" id="2_qjfgi"]
 [ext_resource type="PackedScene" uid="uid://betupkbiwlaqc" path="res://scenes/Bin/front_paper_bin.tscn" id="3_qjfgi"]
 [ext_resource type="PackedScene" uid="uid://dtr4b7kalws1m" path="res://scenes/Bin/front_plastic_bin.tscn" id="4_2r1px"]
