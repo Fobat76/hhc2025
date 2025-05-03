@@ -31,11 +31,12 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("interact") and held_item_type == -1 and nearby_item:
 		nearby_item.pickup(self)
 
-# Callbacks to detect item proximity
-func _on_item_area_entered(area):
-	if area is Item and held_item_type == -1:
-		nearby_item = area
 
-func _on_item_area_exited(area):
-	if area == nearby_item:
-		nearby_item = null
+func _on_pickup_range_area_entered(area: Area2D) -> void:
+		if area is Item and held_item_type == -1:
+			nearby_item = area
+
+
+func _on_pickup_range_area_exited(area: Area2D) -> void:
+		if area == nearby_item:
+			nearby_item = null
