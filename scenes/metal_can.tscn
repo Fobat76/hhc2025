@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://6dyt5gnqquhj"]
 
-[ext_resource type="Script" uid="uid://b7n238eww0td8" path="res://scripts/Metal.gd" id="1_y3naj"]
+[ext_resource type="Script" uid="uid://b7n238eww0td8" path="res://scripts/Items/Metals/Metal.gd" id="1_y3naj"]
 [ext_resource type="Texture2D" uid="uid://cwcpsb5hrhcdh" path="res://icon.svg" id="2_cod46"]
 
 [node name="MetalCan" type="Node2D"]

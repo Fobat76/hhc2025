@@ -1,4 +1,4 @@
-extends "res://scripts/Items.gd"
+extends "res://scripts/Items/Items.gd"
 class_name Paper
 
 func get_item_type() -> ItemType:
