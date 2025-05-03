@@ -1,10 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwx5v3f6ysipn"]
+[gd_scene load_steps=4 format=3 uid="uid://cwx5v3f6ysipn"]
 
 [ext_resource type="PackedScene" uid="uid://6dyt5gnqquhj" path="res://scenes/metal_can.tscn" id="1_bgqi4"]
 [ext_resource type="PackedScene" uid="uid://b5fm3lh0o36ox" path="res://scenes/player.tscn" id="2_qjfgi"]
+[ext_resource type="PackedScene" uid="uid://betupkbiwlaqc" path="res://scenes/front_paper_bin.tscn" id="3_qjfgi"]
 
 [node name="TestLevel" type="Node2D"]
 
 [node name="MetalCan" parent="." instance=ExtResource("1_bgqi4")]
 
 [node name="Player" parent="." instance=ExtResource("2_qjfgi")]
+top_level = true
+
+[node name="front_paper_bin" parent="." instance=ExtResource("3_qjfgi")]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(139, 10)
