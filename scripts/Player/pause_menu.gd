@@ -1,8 +1,5 @@
 extends Control
 
-func _ready():
-	$AnimationPlayer.play("RESET")
-
 func resume():
 	get_tree().paused = false
 	$TextureRect.set_visibility_layer_bit(1, false)
