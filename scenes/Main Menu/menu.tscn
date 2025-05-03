@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bs2y5eaj8st6p"]
+[gd_scene load_steps=5 format=3 uid="uid://bs2y5eaj8st6p"]
 
 [ext_resource type="Script" uid="uid://bet1h166tl7no" path="res://scripts/Main Menu/menu.gd" id="1_23fyw"]
 [ext_resource type="PackedScene" uid="uid://coevmsl54ryoc" path="res://scenes/Main Menu/Level_Selection.tscn" id="2_xlwsp"]
 [ext_resource type="Texture2D" uid="uid://k3qauhqk8gpq" path="res://assets/mainMenuButtons.png" id="3_xlwsp"]
+[ext_resource type="AudioStream" uid="uid://dudtx6wi38opd" path="res://assets/music/Menu.mp3" id="4_a5w65"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -72,6 +73,12 @@ offset_bottom = 180.0
 
 [node name="LevelSelection" parent="CanvasLayer" instance=ExtResource("2_xlwsp")]
 visibility_layer = 0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_a5w65")
+volume_db = -3.161
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="CanvasLayer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Settings" to="." method="_on_settings_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://cl5yel1ffx4et"]
+[gd_scene load_steps=10 format=4 uid="uid://cl5yel1ffx4et"]
 
 [ext_resource type="Texture2D" uid="uid://d1myreqprgtpr" path="res://assets/BuildingBlocks.png" id="1_xq6p0"]
 [ext_resource type="PackedScene" uid="uid://b5fm3lh0o36ox" path="res://scenes/Player/player.tscn" id="2_djuqw"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ddfk5nptnbkyp" path="res://scenes/Bin/front_metal_bin.tscn" id="4_c6375"]
 [ext_resource type="PackedScene" uid="uid://dtr4b7kalws1m" path="res://scenes/Bin/front_plastic_bin.tscn" id="5_ylpj7"]
 [ext_resource type="PackedScene" uid="uid://betupkbiwlaqc" path="res://scenes/Bin/front_paper_bin.tscn" id="6_ar5rt"]
+[ext_resource type="Script" uid="uid://otn6x8ai6onm" path="res://scripts/Player/stopwatch.gd" id="8_ar5rt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xq6p0"]
 texture = ExtResource("1_xq6p0")
@@ -98,10 +99,6 @@ tile_map_data = PackedByteArray("AAD7//v/AAADAAAAAAD8//v/AAADAAAAAAD9//v/AAADAAA
 tile_set = SubResource("TileSet_imish")
 
 [node name="Player" parent="." instance=ExtResource("2_djuqw")]
-top_level = true
-position = Vector2(135, 104)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
 
 [node name="front_Ewaste_bin" parent="." instance=ExtResource("3_2bxmg")]
 position = Vector2(65, 11)
@@ -114,3 +111,7 @@ position = Vector2(225, 11)
 
 [node name="front_paper_bin" parent="." instance=ExtResource("6_ar5rt")]
 position = Vector2(65, 146)
+
+[node name="Stopwatch" type="Node2D" parent="."]
+script = ExtResource("8_ar5rt")
+metadata/_custom_type_script = "uid://otn6x8ai6onm"
