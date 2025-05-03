@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" uid="uid://c7sx34pq61r44" path="res://scripts/level_selection.gd" id="1_ow82o"]
 
-[node name="LevelSelection" type="Node2D"]
+[node name="LevelSelection" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_ow82o")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_left = 6.0
-offset_top = 3.0
-offset_right = 314.0
-offset_bottom = 43.0
+offset_right = 150.0
+offset_bottom = 31.0
 
 [node name="Button" type="Button" parent="HBoxContainer"]
 layout_mode = 2
@@ -39,23 +39,22 @@ text = "6"
 layout_mode = 2
 text = "7"
 
-[node name="Button8" type="Button" parent="HBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 33.0
+offset_right = 118.0
+offset_bottom = 64.0
+
+[node name="Button" type="Button" parent="HBoxContainer2"]
 layout_mode = 2
 text = "8"
 
-[node name="Button9" type="Button" parent="HBoxContainer"]
+[node name="Button2" type="Button" parent="HBoxContainer2"]
 layout_mode = 2
 text = "9"
 
-[node name="Button10" type="Button" parent="HBoxContainer"]
+[node name="Button3" type="Button" parent="HBoxContainer2"]
 layout_mode = 2
-text = "10"
-
-[node name="BackToMenu" type="Button" parent="."]
-offset_left = 1.0
-offset_top = 147.0
-offset_right = 158.0
-offset_bottom = 178.0
-text = "Back to Main Menu"
-
-[connection signal="pressed" from="BackToMenu" to="." method="_on_back_to_menu_pressed"]
+text = "10
+"

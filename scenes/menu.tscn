@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bs2y5eaj8st6p"]
+[gd_scene load_steps=3 format=3 uid="uid://bs2y5eaj8st6p"]
 
 [ext_resource type="Script" uid="uid://bet1h166tl7no" path="res://scripts/menu.gd" id="1_yqeox"]
+[ext_resource type="PackedScene" uid="uid://coevmsl54ryoc" path="res://scenes/Level_Selection.tscn" id="2_vjb58"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -57,6 +58,13 @@ offset_top = 146.0
 offset_right = 134.0
 offset_bottom = 177.0
 text = "Quit"
+
+[node name="LevelSelection" parent="." instance=ExtResource("2_vjb58")]
+visibility_layer = 0
+offset_left = 173.0
+offset_top = 8.0
+offset_right = 173.0
+offset_bottom = 8.0
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]

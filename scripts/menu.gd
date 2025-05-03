@@ -4,7 +4,7 @@ func _ready():
 	$PlayButton.grab_focus()
 
 func _on_play_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/Level_Selection.tscn")
+	$LevelSelection.set_visibility_layer_bit(1, true)
 
 func _on_settings_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/options.tscn")
