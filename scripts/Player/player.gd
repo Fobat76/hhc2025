@@ -9,23 +9,32 @@ var nearby_item: Item = null
 
 func _physics_process(delta):
 	var direction = Vector2.ZERO
+
+	# Movement vector
 	if Input.is_action_pressed("move_right"):
 		direction.x += 1
-		animated_sprite_2d.play("walk_right")
-	elif Input.is_action_pressed("move_left"):
+	if Input.is_action_pressed("move_left"):
 		direction.x -= 1
-		animated_sprite_2d.play("walk_left")
-	elif Input.is_action_pressed("move_down"):
+	if Input.is_action_pressed("move_down"):
 		direction.y += 1
-		animated_sprite_2d.play("walk_down")
-	elif Input.is_action_pressed("move_up"):
+	if Input.is_action_pressed("move_up"):
 		direction.y -= 1
-		animated_sprite_2d.play("walk_up")
-	else:
-		animated_sprite_2d.play("idle")
 
+	# Normalize and move
 	velocity = direction.normalized() * speed if direction.length() > 0 else Vector2.ZERO
 	move_and_slide()
+
+	# Animations – choose based on last key pressed
+	if Input.is_action_pressed("move_up"):
+		animated_sprite_2d.play("walk_up")
+	elif Input.is_action_pressed("move_down"):
+		animated_sprite_2d.play("walk_down")
+	elif Input.is_action_pressed("move_right"):
+		animated_sprite_2d.play("walk_right")
+	elif Input.is_action_pressed("move_left"):
+		animated_sprite_2d.play("walk_left")
+	else:
+		animated_sprite_2d.play("idle")
 
 	# Pick up item
 	if Input.is_action_just_pressed("interact") and held_item_type == -1 and nearby_item:

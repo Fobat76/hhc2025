@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://c31veh8fxv250"]
+
+[ext_resource type="Script" uid="uid://dp7hru4jv6r3r" path="res://scripts/Items/Item.gd" id="1_bji4p"]
+[ext_resource type="Texture2D" uid="uid://dcnfm5d4c0mkr" path="res://assets/Items.png" id="2_bilbl"]
+[ext_resource type="FontFile" uid="uid://d0qe8c1rsiu30" path="res://assets/Font/Minecraft.ttf" id="3_2l5ec"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cod46"]
+radius = 8.06226
+
+[node name="sodacan" type="Area2D"]
+script = ExtResource("1_bji4p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.76837e-07, 0)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_bilbl")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cod46")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = -62.0
+offset_top = -33.0
+offset_right = 68.0
+offset_bottom = -17.0
+theme_override_fonts/font = ExtResource("3_2l5ec")
+text = "Space to pick up"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
