@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddfk5nptnbkyp"]
+
+[ext_resource type="Texture2D" uid="uid://duauh6hpm2ctl" path="res://assets/BuildingBlocks.png" id="1_d20vn"]
+[ext_resource type="Script" uid="uid://bgwv28x4nagdi" path="res://scripts/Bin/bump_detection.gd" id="2_n123r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_25m10"]
+size = Vector2(26, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d35qk"]
+size = Vector2(28, 21)
+
+[node name="front_paper_bin" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_d20vn")
+region_enabled = true
+region_rect = Rect2(224, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6.5)
+shape = SubResource("RectangleShape2D_25m10")
+debug_color = Color(0.316884, 0.0129155, 0.0763867, 0.42)
+
+[node name="BumpDetection" type="Area2D" parent="."]
+script = ExtResource("2_n123r")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BumpDetection"]
+visible = false
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_d35qk")
+
+[connection signal="body_entered" from="BumpDetection" to="BumpDetection" method="_on_body_entered"]

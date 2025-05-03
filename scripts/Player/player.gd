@@ -1,17 +1,14 @@
 extends CharacterBody2D
+const Item = preload("res://scripts/Items/Items.gd")
 
 @export var speed = 300
-var screen_size
-var holding = false
+var held_item_type: Items.ItemType = -1
+var nearby_item: Item = null  
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
-func _ready():
-	screen_size = get_viewport_rect().size
-
 func _physics_process(delta):
 	var direction = Vector2.ZERO
-
 	if Input.is_action_pressed("move_right"):
 		direction.x += 1
 		animated_sprite_2d.play("walk_right")
@@ -27,18 +24,18 @@ func _physics_process(delta):
 	else:
 		animated_sprite_2d.play("idle")
 
-	if direction.length() > 0:
-		velocity = direction.normalized() * speed
-	else:
-		velocity = Vector2.ZERO
-
+	velocity = direction.normalized() * speed if direction.length() > 0 else Vector2.ZERO
 	move_and_slide()
 
-	# Interaction input
-	if Input.is_action_just_pressed("interact"):
-		if not holding:
-			holding = true
+	# Pick up item
+	if Input.is_action_just_pressed("interact") and held_item_type == -1 and nearby_item:
+		nearby_item.pickup(self)
 
-func start(pos):
-	position = pos
-	show()
+# Callbacks to detect item proximity
+func _on_item_area_entered(area):
+	if area is Item and held_item_type == -1:
+		nearby_item = area
+
+func _on_item_area_exited(area):
+	if area == nearby_item:
+		nearby_item = null

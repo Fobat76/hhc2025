@@ -1,10 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://6dyt5gnqquhj"]
+[gd_scene load_steps=2 format=3 uid="uid://by4xf6y0x5eoo"]
 
-[ext_resource type="Script" uid="uid://b7n238eww0td8" path="res://scripts/Items/Metals/Metal.gd" id="1_y3naj"]
 [ext_resource type="Texture2D" uid="uid://cwcpsb5hrhcdh" path="res://icon.svg" id="2_cod46"]
 
 [node name="MetalCan" type="Node2D"]
-script = ExtResource("1_y3naj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(30, 29)
