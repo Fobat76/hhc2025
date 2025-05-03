@@ -60,3 +60,5 @@ text = "Quit"
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Extra_Credits" to="." method="_on_extra_credits_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
