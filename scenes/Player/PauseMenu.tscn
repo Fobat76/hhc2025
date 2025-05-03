@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0wjtjwdpo5ms"]
+
+[ext_resource type="Script" uid="uid://bgue8p7djurye" path="res://scripts/Player/pause_menu.gd" id="1_g4jo0"]
+[ext_resource type="Texture2D" uid="uid://pl1t5xo0yups" path="res://assets/pauseMenu.png" id="1_jvnd5"]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g4jo0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Resume" type="Button" parent="CanvasLayer"]
+visibility_layer = 0
+offset_left = 130.0
+offset_top = 71.0
+offset_right = 203.0
+offset_bottom = 84.0
+
+[node name="Restart" type="Button" parent="CanvasLayer"]
+visibility_layer = 0
+offset_left = 129.0
+offset_top = 96.0
+offset_right = 203.0
+offset_bottom = 109.0
+
+[node name="Quit" type="Button" parent="CanvasLayer"]
+visibility_layer = 0
+offset_left = 130.0
+offset_top = 121.0
+offset_right = 203.0
+offset_bottom = 134.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+process_mode = 3
+visibility_layer = 0
+z_index = -1
+offset_right = 320.0
+offset_bottom = 180.0
+texture = ExtResource("1_jvnd5")
+
+[connection signal="pressed" from="CanvasLayer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="CanvasLayer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]
