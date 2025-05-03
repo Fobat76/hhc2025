@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://betupkbiwlaqc"]
+[gd_scene load_steps=5 format=3 uid="uid://betupkbiwlaqc"]
 
 [ext_resource type="Texture2D" uid="uid://duauh6hpm2ctl" path="res://assets/BuildingBlocks.png" id="1_d35qk"]
+[ext_resource type="Script" uid="uid://bgwv28x4nagdi" path="res://scenes/bump_detection.gd" id="3_lhb1d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_25m10"]
 size = Vector2(26, 7)
@@ -20,9 +21,12 @@ position = Vector2(0, -6.5)
 shape = SubResource("RectangleShape2D_25m10")
 debug_color = Color(0.316884, 0.0129155, 0.0763867, 0.42)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="BumpDetection" type="Area2D" parent="."]
+script = ExtResource("3_lhb1d")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BumpDetection"]
 visible = false
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_d35qk")
+
+[connection signal="body_entered" from="BumpDetection" to="BumpDetection" method="_on_body_entered"]
