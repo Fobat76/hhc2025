@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://b71tc2jaxp46x"]
+
+[ext_resource type="Script" uid="uid://ca5v8v4hybosn" path="res://scripts/Main Menu/options.gd" id="1_s5nxo"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_s5nxo")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 21.0
+offset_right = 227.0
+offset_bottom = 122.0
+text = "Here is how to play:
+1.
+2. 
+3."
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_top = 149.0
+offset_right = 45.0
+offset_bottom = 180.0
+text = "Back"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
