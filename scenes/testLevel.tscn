@@ -1,17 +1,20 @@
-[gd_scene load_steps=8 format=3 uid="uid://cwx5v3f6ysipn"]
+[gd_scene load_steps=14 format=3 uid="uid://cwx5v3f6ysipn"]
 
-[ext_resource type="PackedScene" uid="uid://by4xf6y0x5eoo" path="res://scenes/Items/metal_can.tscn" id="1_bgqi4"]
 [ext_resource type="PackedScene" uid="uid://b5fm3lh0o36ox" path="res://scenes/Player/player.tscn" id="2_qjfgi"]
 [ext_resource type="PackedScene" uid="uid://betupkbiwlaqc" path="res://scenes/Bin/front_paper_bin.tscn" id="3_qjfgi"]
 [ext_resource type="PackedScene" uid="uid://dtr4b7kalws1m" path="res://scenes/Bin/front_plastic_bin.tscn" id="4_2r1px"]
 [ext_resource type="PackedScene" uid="uid://ddfk5nptnbkyp" path="res://scenes/Bin/front_metal_bin.tscn" id="5_rwtji"]
 [ext_resource type="PackedScene" uid="uid://cdreegaac4t62" path="res://scenes/Bin/front_Ewaste_bin.tscn" id="6_aqu4s"]
-[ext_resource type="PackedScene" uid="uid://dqvum3m6c81yt" path="res://scenes/Menu_Music.tscn" id="7_aqu4s"]
+[ext_resource type="PackedScene" uid="uid://c8nftouitggn" path="res://scenes/Items/ketchup.tscn" id="7_bso8f"]
+[ext_resource type="PackedScene" uid="uid://cacxwioeschgr" path="res://scenes/Items/pokeball.tscn" id="8_hu6j5"]
+[ext_resource type="PackedScene" uid="uid://e3pt1i4etc8x" path="res://scenes/Items/fryingpan.tscn" id="8_qsttf"]
+[ext_resource type="PackedScene" uid="uid://c31veh8fxv250" path="res://scenes/Items/sodacan.tscn" id="8_sir0p"]
+[ext_resource type="PackedScene" uid="uid://bycvvha523ukm" path="res://scenes/Items/master_sword_hylian_shield.tscn" id="10_sir0p"]
+[ext_resource type="PackedScene" uid="uid://cpmgumy0rh8cu" path="res://scenes/Items/plastic_bottle.tscn" id="10_wp2t3"]
+[ext_resource type="PackedScene" uid="uid://b56m6qj0xfu7b" path="res://scenes/Items/takeout.tscn" id="12_31r7n"]
+[ext_resource type="PackedScene" uid="uid://b38gib5ln4ggw" path="res://scenes/Items/candybar.tscn" id="13_1tu8g"]
 
 [node name="TestLevel" type="Node2D"]
-
-[node name="Background Audio" parent="." instance=ExtResource("7_aqu4s")]
-parameters/looping = true
 
 [node name="Player" parent="." instance=ExtResource("2_qjfgi")]
 top_level = true
@@ -19,31 +22,37 @@ top_level = true
 [node name="front_paper_bin" parent="." instance=ExtResource("3_qjfgi")]
 light_mask = 4
 visibility_layer = 4
-position = Vector2(153, 41)
+position = Vector2(279, 11)
 
 [node name="front_paper_bin2" parent="." instance=ExtResource("4_2r1px")]
-position = Vector2(227, 49)
+position = Vector2(306, 11)
 
 [node name="front_paper_bin3" parent="." instance=ExtResource("5_rwtji")]
-position = Vector2(117, 81)
+position = Vector2(228, 11)
 
 [node name="front_paper_bin4" parent="." instance=ExtResource("6_aqu4s")]
-position = Vector2(203, 94)
+position = Vector2(253, 11)
 
-[node name="MetalCan" parent="." instance=ExtResource("1_bgqi4")]
-position = Vector2(42, 36)
+[node name="ketchup" parent="." instance=ExtResource("7_bso8f")]
+position = Vector2(-33, 2)
 
-[node name="MetalCan2" parent="." instance=ExtResource("1_bgqi4")]
-position = Vector2(118, 15)
+[node name="fryingpan" parent="." instance=ExtResource("8_qsttf")]
+position = Vector2(99, 38)
 
-[node name="MetalCan3" parent="." instance=ExtResource("1_bgqi4")]
-position = Vector2(110, 108)
+[node name="sodacan" parent="." instance=ExtResource("8_sir0p")]
+position = Vector2(99, 70)
 
-[node name="MetalCan4" parent="." instance=ExtResource("1_bgqi4")]
-position = Vector2(174, 101)
+[node name="Pokeball" parent="." instance=ExtResource("8_hu6j5")]
+position = Vector2(94, 10)
 
-[node name="MetalCan5" parent="." instance=ExtResource("1_bgqi4")]
-position = Vector2(216, 28)
+[node name="plastic_bottle" parent="." instance=ExtResource("10_wp2t3")]
+position = Vector2(101, 138)
 
-[node name="MetalCan6" parent="." instance=ExtResource("1_bgqi4")]
-position = Vector2(43, 110)
+[node name="master_sword_hylian_shield" parent="." instance=ExtResource("10_sir0p")]
+position = Vector2(102, 109)
+
+[node name="candybar" parent="." instance=ExtResource("13_1tu8g")]
+position = Vector2(101, 162)
+
+[node name="takeout" parent="." instance=ExtResource("12_31r7n")]
+position = Vector2(54, 161)
