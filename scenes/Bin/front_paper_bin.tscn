@@ -23,6 +23,7 @@ debug_color = Color(0.316884, 0.0129155, 0.0763867, 0.42)
 
 [node name="BumpDetection" type="Area2D" parent="."]
 script = ExtResource("3_lhb1d")
+bin_type = 2
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="BumpDetection"]
 visible = false

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://by4xf6y0x5eoo"]
+
+[ext_resource type="Script" uid="uid://dp7hru4jv6r3r" path="res://scripts/Items/Item.gd" id="1_cod46"]
+[ext_resource type="Texture2D" uid="uid://cwcpsb5hrhcdh" path="res://icon.svg" id="2_cod46"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cod46"]
+radius = 11.0
+
+[node name="MetalCan" type="Area2D"]
+script = ExtResource("1_cod46")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.76837e-07, 0)
+scale = Vector2(0.109375, 0.109375)
+texture = ExtResource("2_cod46")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cod46")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = -58.0
+offset_top = -33.0
+offset_right = 68.0
+offset_bottom = -10.0
+text = "Space to pick up"
