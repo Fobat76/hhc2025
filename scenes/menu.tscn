@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs2y5eaj8st6p"]
+
+[ext_resource type="Script" uid="uid://bet1h166tl7no" path="res://scripts/menu.gd" id="1_yqeox"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = 1.0
+offset_right = -5.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yqeox")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 11.0
+offset_right = 170.0
+offset_bottom = 34.0
+text = "Title"
+horizontal_alignment = 1
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 2
+anchor_left = 0.017
+anchor_right = 0.017
+offset_left = 40.56
+offset_top = 42.0
+offset_right = 156.56
+offset_bottom = 73.0
+text = "Play"
+
+[node name="Settings" type="Button" parent="."]
+layout_mode = 2
+offset_left = 18.0
+offset_top = 77.0
+offset_right = 134.0
+offset_bottom = 108.0
+text = "How To Play"
+
+[node name="Extra_Credits" type="Button" parent="."]
+layout_mode = 2
+offset_left = 45.0
+offset_top = 112.0
+offset_right = 161.0
+offset_bottom = 143.0
+text = "Extra/Credits"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 2
+offset_left = 17.0
+offset_top = 146.0
+offset_right = 134.0
+offset_bottom = 177.0
+text = "Quit"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]

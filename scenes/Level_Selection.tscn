@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://coevmsl54ryoc"]
+
+[ext_resource type="Script" uid="uid://c7sx34pq61r44" path="res://scripts/level_selection.gd" id="1_ow82o"]
+
+[node name="LevelSelection" type="Node2D"]
+script = ExtResource("1_ow82o")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 6.0
+offset_top = 3.0
+offset_right = 314.0
+offset_bottom = 43.0
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "1"
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "2"
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "3"
+
+[node name="Button4" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "4"
+
+[node name="Button5" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "5"
+
+[node name="Button6" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "6"
+
+[node name="Button7" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "7"
+
+[node name="Button8" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "8"
+
+[node name="Button9" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "9"
+
+[node name="Button10" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "10"
+
+[node name="BackToMenu" type="Button" parent="."]
+offset_left = 1.0
+offset_top = 147.0
+offset_right = 158.0
+offset_bottom = 178.0
+text = "Back to Main Menu"
+
+[connection signal="pressed" from="BackToMenu" to="." method="_on_back_to_menu_pressed"]
