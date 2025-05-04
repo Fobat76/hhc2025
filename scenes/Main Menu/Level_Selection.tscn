@@ -83,6 +83,7 @@ scale = Vector2(0.55, 0.55)
 texture = ExtResource("7_hm2dq")
 
 [node name="LevelButton2" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = -3.0
 offset_top = 10.0
 offset_right = 37.0
@@ -91,6 +92,7 @@ scale = Vector2(0.55, 0.55)
 texture = ExtResource("8_dpplk")
 
 [node name="LevelButton3" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 25.0
 offset_top = 10.0
 offset_right = 65.0
@@ -99,6 +101,7 @@ scale = Vector2(0.55, 0.55)
 texture = ExtResource("9_7hhyc")
 
 [node name="LevelButton4" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 53.0
 offset_top = 10.0
 offset_right = 93.0
@@ -107,6 +110,7 @@ scale = Vector2(0.55, 0.55)
 texture = ExtResource("10_j1s1v")
 
 [node name="LevelButton5" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 79.0
 offset_top = 10.0
 offset_right = 119.0

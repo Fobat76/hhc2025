@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b71tc2jaxp46x"]
+[gd_scene load_steps=6 format=3 uid="uid://5vji2v5xg616"]
 
 [ext_resource type="Script" uid="uid://ca5v8v4hybosn" path="res://scripts/Main Menu/options.gd" id="1_s5nxo"]
 [ext_resource type="Texture2D" uid="uid://dwxj6iri3rjlk" path="res://assets/howToPages/howToPage1.png" id="2_d30lr"]
@@ -44,8 +44,7 @@ offset_left = 5.0
 offset_top = -1.0
 offset_right = 325.0
 offset_bottom = 179.0
-texture = ExtResource("5_yqcbg")
-
+texture = ExtResource("5_d30lr")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
