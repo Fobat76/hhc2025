@@ -2,26 +2,26 @@
 
 - [x] Detect player input for movement using WASD keys
 - [x] Detect interaction input using the E key
-- [ ] Track player-held item (or none) at any time
+- [x] Track player-held item (or none) at any time
 - [x] Switch player animations between idle and movement states
-- [ ] Prevent item pickup when already holding one
-- [ ] Allow item drop in bins and punish if dropped in wrong bin
+- [x] Prevent item pickup when already holding one
+- [x] Allow item drop in bins and punish if dropped in wrong bin
 
 ---
 
 ## Map Elements
 
 ### Bins
-- [ ] Assign each bin a type (e.g., plastic, biodegradable, metal, glass, electronic)
+- [x] Assign each bin a type (e.g., plastic, biodegradable, metal, glass, electronic)
 - [ ] Enable interaction to drop an item
-- [ ] Check whether dropped item matches bin type
-- [ ] Award or deduct heart based on correctness
+- [x] Check whether dropped item matches bin type
+- [x] Award or deduct heart based on correctness
 
 ### Items
-- [ ] Item graphics
-- [ ] Assign a type to each item
-- [ ] Allow item to be picked up once
-- [ ] Despawn or hide item after pickup
+- [x] Item graphics
+- [x] Assign a type to each item
+- [x] Allow item to be picked up once
+- [x] Despawn or hide item after pickup
 
 ### Conveyor Belt
 - [ ] Move items consistently across a path or direction
@@ -29,12 +29,12 @@
 - [ ] Punish the player if the item is moved to the end
 
 ### Dumpster Drop
-- [ ] Spawn random items
-- [ ] Randomize item type
-- [ ] Limit number of items to spawn
+- [x] Spawn random items
+- [x] Randomize item type
+- [x] Limit number of items to spawn
 
 ### Obstacles
-- [ ] Block player path or item access
+- [x] Block player path or item access
 - [ ] Optionally use triggers (e.g., lever) to open or close paths or change conveyor belt direction
 
 ---
@@ -42,23 +42,23 @@
 ## HUD In-Game
 
 - [ ] Display countdown timer during gameplay
-- [ ] Display remaining lives or allowed mistakes
-- [ ] Provide pause, restart, and quit options
+- [x] Display remaining lives or allowed mistakes
+- [x] Provide pause, restart, and quit options
 - [ ] Display earned stars at end of level
-- [ ] Show "Next Level" option when criteria are met
+- [x] Show "Next Level" option when criteria are met
 
 ---
 
 ## HUD Out-of-Game
 
-- [ ] Choosing level
-- [ ] Main menu
+- [x] Choosing level
+- [x] Main menu
 
 ---
 
 ## Stretch Features
 
-- [ ] Create multiple unique map layouts
-- [ ] Swap visual themes depending on the setting
-- [ ] Vary item types or spawn behavior per map
+- [x] Create multiple unique map layouts
+- [x] Swap visual themes depending on the setting
+- [x] Vary item types or spawn behavior per map
 - [ ] Wiki for every item included in the game
