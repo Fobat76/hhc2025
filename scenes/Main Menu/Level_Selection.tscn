@@ -1,11 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://coevmsl54ryoc"]
+[gd_scene load_steps=13 format=3 uid="uid://coevmsl54ryoc"]
 
 [ext_resource type="Script" uid="uid://c7sx34pq61r44" path="res://scripts/Main Menu/level_selection.gd" id="1_ow82o"]
 [ext_resource type="Texture2D" uid="uid://3je5wuwlsn4x" path="res://assets/mainMenuBackgrounds/unblurredLevel1.png" id="2_6u4ni"]
+[ext_resource type="Texture2D" uid="uid://degch0o5h6gxm" path="res://assets/mainMenuBackgrounds/blurredLevel5.png" id="2_dpplk"]
 [ext_resource type="Texture2D" uid="uid://bckk002h2t8of" path="res://assets/mainMenuBackgrounds/blurredLevel4.png" id="2_wddgw"]
 [ext_resource type="Texture2D" uid="uid://bq2omvsot3frk" path="res://assets/mainMenuBackgrounds/blurredLevel3.png" id="3_a33mh"]
 [ext_resource type="Texture2D" uid="uid://bjkmv3dra1rbg" path="res://assets/mainMenuBackgrounds/blurredLevel2.png" id="4_2h2ip"]
 [ext_resource type="Texture2D" uid="uid://b1gef04ad3u3v" path="res://assets/mainMenuBackgrounds/blurredLevel1.png" id="5_bcwrm"]
+[ext_resource type="Texture2D" uid="uid://c8nt2ygmucgth" path="res://assets/levelButtons/levelButton1.png" id="7_hm2dq"]
+[ext_resource type="Texture2D" uid="uid://cmpvealqdesj1" path="res://assets/levelButtons/levelButton2.png" id="8_dpplk"]
+[ext_resource type="Texture2D" uid="uid://b8hw78ekji25f" path="res://assets/levelButtons/levelButton3.png" id="9_7hhyc"]
+[ext_resource type="Texture2D" uid="uid://ckx6pvu0fqbpq" path="res://assets/levelButtons/levelButton4.png" id="10_j1s1v"]
+[ext_resource type="Texture2D" uid="uid://bwjw8058urq8q" path="res://assets/levelButtons/levelButton5.png" id="11_47hlv"]
 
 [node name="LevelSelection" type="Control"]
 layout_mode = 3
@@ -13,6 +19,15 @@ anchors_preset = 0
 offset_left = 188.0
 offset_right = 188.0
 script = ExtResource("1_ow82o")
+
+[node name="Level5Blurred" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -61.0
+offset_top = -1.0
+offset_right = 132.0
+offset_bottom = 179.0
+texture = ExtResource("2_dpplk")
 
 [node name="Level4Blurred" type="TextureRect" parent="."]
 visible = false
@@ -58,36 +73,89 @@ offset_right = 132.0
 offset_bottom = 180.0
 texture = ExtResource("2_6u4ni")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-z_index = 5
+[node name="LevelButton1" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -18.0
-offset_top = 6.0
-offset_right = 90.0
-offset_bottom = 37.0
+offset_left = -31.0
+offset_top = 10.0
+offset_right = 9.0
+offset_bottom = 50.0
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("7_hm2dq")
 
-[node name="GoLevel1" type="Button" parent="HBoxContainer"]
+[node name="LevelButton2" type="TextureRect" parent="."]
+offset_left = -3.0
+offset_top = 10.0
+offset_right = 37.0
+offset_bottom = 50.0
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("8_dpplk")
+
+[node name="LevelButton3" type="TextureRect" parent="."]
+offset_left = 25.0
+offset_top = 10.0
+offset_right = 65.0
+offset_bottom = 50.0
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("9_7hhyc")
+
+[node name="LevelButton4" type="TextureRect" parent="."]
+offset_left = 53.0
+offset_top = 10.0
+offset_right = 93.0
+offset_bottom = 50.0
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("10_j1s1v")
+
+[node name="LevelButton5" type="TextureRect" parent="."]
+offset_left = 79.0
+offset_top = 10.0
+offset_right = 119.0
+offset_bottom = 50.0
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("11_47hlv")
+
+[node name="GoLevel1" type="Button" parent="."]
+visibility_layer = 0
 layout_mode = 2
-text = "1"
+offset_left = -31.0
+offset_top = 10.0
+offset_right = -9.0
+offset_bottom = 32.0
 
-[node name="GoLevel2" type="Button" parent="HBoxContainer"]
+[node name="GoLevel2" type="Button" parent="."]
+visibility_layer = 0
 layout_mode = 2
-text = "2"
+offset_left = -3.0
+offset_top = 10.0
+offset_right = 19.0
+offset_bottom = 32.0
 
-[node name="GoLevel3" type="Button" parent="HBoxContainer"]
+[node name="GoLevel3" type="Button" parent="."]
+visibility_layer = 0
 layout_mode = 2
-text = "3"
+offset_left = 25.0
+offset_top = 10.0
+offset_right = 47.0
+offset_bottom = 32.0
 
-[node name="GoLevel4" type="Button" parent="HBoxContainer"]
+[node name="GoLevel4" type="Button" parent="."]
+visibility_layer = 0
 layout_mode = 2
-text = "4"
+offset_left = 53.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 32.0
 
-[node name="GoLevel5" type="Button" parent="HBoxContainer"]
+[node name="GoLevel5" type="Button" parent="."]
+visibility_layer = 0
 layout_mode = 2
-text = "5"
+offset_left = 79.0
+offset_top = 10.0
+offset_right = 101.0
+offset_bottom = 32.0
 
-[connection signal="pressed" from="HBoxContainer/GoLevel1" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/GoLevel2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="HBoxContainer/GoLevel3" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="HBoxContainer/GoLevel4" to="." method="_on_button_4_pressed"]
-[connection signal="pressed" from="HBoxContainer/GoLevel5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="GoLevel1" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="GoLevel2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="GoLevel3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="GoLevel4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="GoLevel5" to="." method="_on_button_5_pressed"]

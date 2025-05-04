@@ -19,18 +19,20 @@ func _on_button_4_pressed() -> void:
 func _on_button_5_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/Levels/level5.tscn")
 
-@onready var level1Button = $HBoxContainer/GoLevel1
+@onready var level1Button = $GoLevel1
 @onready var img1 = $Level1Blurred
 
-@onready var level2Button = $HBoxContainer/GoLevel2
+@onready var level2Button = $GoLevel2
 @onready var img2 = $Level2Blurred
 
-@onready var level3Button = $HBoxContainer/GoLevel3
+@onready var level3Button = $GoLevel3
 @onready var img3 = $Level3Blurred
 
-@onready var level4Button = $HBoxContainer/GoLevel4
+@onready var level4Button = $GoLevel4
 @onready var img4 = $Level4Blurred
 
+@onready var level5Button = $GoLevel5
+@onready var img5 = $Level5Blurred
 
 func _ready() -> void:
 	level1Button.connect("mouse_entered", Callable(self, "_on_button1_hovered"))
@@ -41,6 +43,8 @@ func _ready() -> void:
 	level3Button.connect("mouse_exited", Callable(self, "_on_button3_unhovered"))
 	level4Button.connect("mouse_entered", Callable(self, "_on_button4_hovered"))
 	level4Button.connect("mouse_exited", Callable(self, "_on_button4_unhovered"))
+	level5Button.connect("mouse_entered", Callable(self, "_on_button5_hovered"))
+	level5Button.connect("mouse_exited", Callable(self, "_on_button5_unhovered"))
 
 func _on_button1_hovered():
 	img1.visible = true
@@ -65,3 +69,9 @@ func _on_button4_hovered():
 
 func _on_button4_unhovered():
 	img4.visible = false
+
+func _on_button5_hovered():
+	img5.visible = true
+
+func _on_button5_unhovered():
+	img5.visible = false
