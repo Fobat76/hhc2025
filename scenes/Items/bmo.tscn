@@ -24,6 +24,7 @@ region_rect = Rect2(6, 101, 20, 21)
 shape = SubResource("CircleShape2D_cod46")
 
 [node name="Label" type="Label" parent="."]
+z_index = 1
 texture_filter = 1
 offset_left = -62.0
 offset_top = -33.0

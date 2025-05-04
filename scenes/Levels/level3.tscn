@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://s4rld1spqmpb"]
+[gd_scene load_steps=17 format=4 uid="uid://s4rld1spqmpb"]
 
 [ext_resource type="PackedScene" uid="uid://b5fm3lh0o36ox" path="res://scenes/Player/player.tscn" id="1_2iout"]
 [ext_resource type="Texture2D" uid="uid://d1myreqprgtpr" path="res://assets/BuildingBlocks.png" id="1_34ocj"]
@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://du0ma751dwg3c" path="res://scenes/itemSpawn.tscn" id="4_55lrb"]
 [ext_resource type="PackedScene" uid="uid://dtr4b7kalws1m" path="res://scenes/Bin/front_plastic_bin.tscn" id="4_c3r25"]
 [ext_resource type="PackedScene" uid="uid://betupkbiwlaqc" path="res://scenes/Bin/front_paper_bin.tscn" id="5_55lrb"]
+[ext_resource type="PackedScene" uid="uid://c2tl0cfm71u1d" path="res://scenes/conveyor.tscn" id="10_gi13k"]
+[ext_resource type="PackedScene" uid="uid://bk3wchc3tiiuy" path="res://scenes/conveyor_4.tscn" id="11_emsw7"]
+[ext_resource type="PackedScene" uid="uid://e7xwktlaueo1" path="res://scenes/conveyor3.tscn" id="12_4ttg5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h7ipp"]
 texture = ExtResource("1_34ocj")
@@ -207,3 +210,29 @@ position = Vector2(274, 48)
 
 [node name="front_paper_bin" parent="." instance=ExtResource("5_55lrb")]
 position = Vector2(47, 163)
+
+[node name="Conveyor" parent="." instance=ExtResource("10_gi13k")]
+position = Vector2(402, 17)
+
+[node name="Conveyor2" parent="." instance=ExtResource("10_gi13k")]
+position = Vector2(434, 17)
+
+[node name="Conveyor3" parent="." instance=ExtResource("10_gi13k")]
+position = Vector2(466, 17)
+
+[node name="Conveyor4" parent="." instance=ExtResource("10_gi13k")]
+position = Vector2(498, 17)
+
+[node name="Conveyor5" parent="." instance=ExtResource("10_gi13k")]
+position = Vector2(529, 17)
+
+[node name="Conveyor6" parent="." instance=ExtResource("11_emsw7")]
+position = Vector2(369.084, 16.9192)
+rotation = -1.5708
+scale = Vector2(1.01, 1.01)
+
+[node name="Conveyor7" parent="." instance=ExtResource("12_4ttg5")]
+position = Vector2(368.926, -15.2279)
+
+[node name="Conveyor8" parent="." instance=ExtResource("12_4ttg5")]
+position = Vector2(368.941, -47.2059)
