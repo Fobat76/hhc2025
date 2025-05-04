@@ -1,8 +1,8 @@
 extends Area2D
 class_name Conveyor
 
-@onready var item_holder = "res://scenes/Conveyor/item_holder.tscn"
-@onready var detector = "res://scenes/Conveyor/detector.tscn"
+@onready var item_holder = $ItemHolder
+@onready var detector = $Detector
 enum Direction {Left, Right, Up, Down}
 @export var to_direction: Direction = Direction.Left
 @export var from_direction: Direction = Direction.Right
