@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://0l8qyrnck2q7"]
 
-[ext_resource type="Script" uid="uid://dauwavhxcdmms" path="res://scripts/Player/hud.gd" id="1_7781g"]
+[ext_resource type="Script" uid="uid://dauwavhxcdmms" path="res://scripts/Bin/hud.gd" id="1_7781g"]
 
 [node name="Hud" type="Control" node_paths=PackedStringArray("spawned_items", "incorrect")]
 layout_mode = 3
