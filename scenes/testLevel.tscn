@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://cwx5v3f6ysipn"]
 
-[ext_resource type="PackedScene" uid="uid://b5fm3lh0o36ox" path="res://scenes/Player/player.tscn" id="2_qjfgi"]
+[ext_resource type="PackedScene" uid="uid://cit3jqa4skns1" path="res://scenes/Player/player.tscn" id="2_qjfgi"]
 [ext_resource type="PackedScene" uid="uid://betupkbiwlaqc" path="res://scenes/Bin/front_paper_bin.tscn" id="3_qjfgi"]
 [ext_resource type="PackedScene" uid="uid://dtr4b7kalws1m" path="res://scenes/Bin/front_plastic_bin.tscn" id="4_2r1px"]
 [ext_resource type="PackedScene" uid="uid://ddfk5nptnbkyp" path="res://scenes/Bin/front_metal_bin.tscn" id="5_rwtji"]
@@ -25,7 +25,6 @@
 [node name="TestLevel" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_qjfgi")]
-top_level = true
 
 [node name="front_paper_bin" parent="." instance=ExtResource("3_qjfgi")]
 light_mask = 4

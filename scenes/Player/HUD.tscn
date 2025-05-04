@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://0l8qyrnck2q7"]
+
+[ext_resource type="Script" uid="uid://dauwavhxcdmms" path="res://scripts/Player/hud.gd" id="1_7781g"]
+
+[node name="Hud" type="Control" node_paths=PackedStringArray("spawned_items", "incorrect")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7781g")
+spawned_items = NodePath("Spawned Items")
+incorrect = NodePath("Incorrect")
+
+[node name="Spawned Items" type="Label" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 162.0
+offset_bottom = 29.0
+theme_override_font_sizes/font_size = 20
+text = "Spawned Items:"
+
+[node name="Incorrect" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 65.0
+offset_bottom = 53.0
+text = "Wrong: "
