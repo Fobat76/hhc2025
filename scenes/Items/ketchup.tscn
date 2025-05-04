@@ -9,7 +9,6 @@
 [node name="ketchup" type="Area2D"]
 script = ExtResource("1_1w7iu")
 item_type = 1
-animation_prefix = "ketchup"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(4.76837e-07, 0)
