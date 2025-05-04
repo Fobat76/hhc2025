@@ -1,9 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://s4rld1spqmpb"]
+[gd_scene load_steps=13 format=4 uid="uid://s4rld1spqmpb"]
 
-[ext_resource type="PackedScene" uid="uid://b5fm3lh0o36ox" path="res://scenes/Player/player.tscn" id="1_2iout"]
+[ext_resource type="PackedScene" uid="uid://cit3jqa4skns1" path="res://scenes/Player/player.tscn" id="1_2iout"]
 [ext_resource type="Texture2D" uid="uid://d1myreqprgtpr" path="res://assets/BuildingBlocks.png" id="1_34ocj"]
+[ext_resource type="Script" uid="uid://cqxdewkxs42v" path="res://scripts/Levels/level_3.gd" id="1_c3r25"]
 [ext_resource type="PackedScene" uid="uid://cdreegaac4t62" path="res://scenes/Bin/front_Ewaste_bin.tscn" id="2_n5ck4"]
 [ext_resource type="PackedScene" uid="uid://ddfk5nptnbkyp" path="res://scenes/Bin/front_metal_bin.tscn" id="3_2iout"]
+[ext_resource type="PackedScene" uid="uid://du0ma751dwg3c" path="res://scenes/itemSpawn.tscn" id="4_55lrb"]
 [ext_resource type="PackedScene" uid="uid://dtr4b7kalws1m" path="res://scenes/Bin/front_plastic_bin.tscn" id="4_c3r25"]
 [ext_resource type="PackedScene" uid="uid://betupkbiwlaqc" path="res://scenes/Bin/front_paper_bin.tscn" id="5_55lrb"]
 
@@ -169,6 +171,7 @@ tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_2iout")
 
 [node name="Level3" type="Node2D"]
+script = ExtResource("1_c3r25")
 
 [node name="Player" parent="." instance=ExtResource("1_2iout")]
 position = Vector2(161, 90)
@@ -184,6 +187,9 @@ z_index = -1
 position = Vector2(161, 64)
 tile_map_data = PackedByteArray("AAACAP7/AAABAAAAAAACAP//AAABAAAAAAACAAAAAAABAAAAAAD7/wEAAAAAAAAAAAD8/wEAAAABAAAAAAD9/wEAAAACAAAAAAD//wIAAAABAAAAAAAAAAIAAAAAAAAAAAABAAIAAAABAAAAAAACAAIAAAACAAAAAAA=")
 tile_set = SubResource("TileSet_c3r25")
+
+[node name="ItemSpawn" parent="." instance=ExtResource("4_55lrb")]
+position = Vector2(48, 48)
 
 [node name="front_Ewaste_bin" parent="." instance=ExtResource("2_n5ck4")]
 position = Vector2(97, 48)
