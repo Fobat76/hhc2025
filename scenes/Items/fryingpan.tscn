@@ -9,7 +9,6 @@ radius = 11.0
 
 [node name="fryingpan" type="Area2D"]
 script = ExtResource("1_ph1it")
-animation_prefix = "fryingpan"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(4.76837e-07, 0)

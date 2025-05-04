@@ -4,7 +4,7 @@ const Item = preload("res://scripts/Items/Items.gd")
 @export var speed = 300
 var held_item_type: Items.ItemType = -1
 var nearby_item: Item = null  
-var held_anim_prefix: String = "walk"
+
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
 func _physics_process(delta):
@@ -23,18 +23,18 @@ func _physics_process(delta):
 	# Normalize and move
 	velocity = direction.normalized() * speed if direction.length() > 0 else Vector2.ZERO
 	move_and_slide()
-	var anim_prefix = held_anim_prefix if held_item_type != -1 else "walk"
+
 	# Animations – choose based on last key pressed
 	if Input.is_action_pressed("move_up"):
-		animated_sprite_2d.play(anim_prefix + "_up")
+		animated_sprite_2d.play("walk_up")
 	elif Input.is_action_pressed("move_down"):
-		animated_sprite_2d.play(anim_prefix + "_down")
+		animated_sprite_2d.play("walk_down")
 	elif Input.is_action_pressed("move_right"):
-		animated_sprite_2d.play(anim_prefix + "_right")
+		animated_sprite_2d.play("walk_right")
 	elif Input.is_action_pressed("move_left"):
-		animated_sprite_2d.play(anim_prefix + "_left")
+		animated_sprite_2d.play("walk_left")
 	else:
-		animated_sprite_2d.play(anim_prefix + "_idle")
+		animated_sprite_2d.play("idle")
 
 	# Pick up item
 	if Input.is_action_just_pressed("interact") and held_item_type == -1 and nearby_item:
