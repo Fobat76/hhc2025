@@ -12,6 +12,7 @@ script = ExtResource("1_daphc")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 texture = ExtResource("2_sa5ko")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
