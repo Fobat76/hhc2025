@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://0l8qyrnck2q7"]
+[gd_scene load_steps=3 format=3 uid="uid://0l8qyrnck2q7"]
 
 [ext_resource type="Script" uid="uid://dauwavhxcdmms" path="res://scripts/Bin/hud.gd" id="1_7781g"]
+[ext_resource type="FontFile" uid="uid://d0qe8c1rsiu30" path="res://assets/Font/Minecraft.ttf" id="2_in72f"]
 
 [node name="Hud" type="Control" node_paths=PackedStringArray("spawned_items", "incorrect")]
 layout_mode = 3
@@ -16,9 +17,10 @@ incorrect = NodePath("Incorrect")
 [node name="Spawned Items" type="Label" parent="."]
 layout_mode = 0
 offset_left = 3.0
-offset_top = 1.0
+offset_top = 7.0
 offset_right = 162.0
-offset_bottom = 29.0
+offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("2_in72f")
 theme_override_font_sizes/font_size = 20
 text = "Spawned Items:"
 
@@ -28,4 +30,5 @@ offset_left = 5.0
 offset_top = 30.0
 offset_right = 65.0
 offset_bottom = 53.0
-text = "Wrong: "
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_in72f")
