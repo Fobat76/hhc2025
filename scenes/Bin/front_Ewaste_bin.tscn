@@ -9,7 +9,7 @@ size = Vector2(26, 7)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d35qk"]
 size = Vector2(28, 21)
 
-[node name="front_paper_bin" type="StaticBody2D"]
+[node name="front_Ewaste_bin" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_5s0wl")
