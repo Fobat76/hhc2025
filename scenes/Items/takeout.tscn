@@ -9,7 +9,6 @@
 [node name="takeout" type="Area2D"]
 script = ExtResource("1_nmqre")
 item_type = 2
-animation_prefix = "takeout"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(4.76837e-07, 0)

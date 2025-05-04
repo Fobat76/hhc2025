@@ -10,7 +10,6 @@ radius = 8.06226
 [node name="plastic_bottle" type="Area2D"]
 script = ExtResource("1_d4ddv")
 item_type = 1
-animation_prefix = "plastic_bottle"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(4.76837e-07, 0)
