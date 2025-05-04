@@ -493,6 +493,7 @@ height = 12.0
 radius = 14.0
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
+top_level = true
 script = ExtResource("1_4flbx")
 metadata/_edit_group_ = true
 
