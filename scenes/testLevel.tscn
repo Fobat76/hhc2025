@@ -26,7 +26,6 @@
 
 [node name="Player" parent="." instance=ExtResource("2_qjfgi")]
 top_level = true
-position = Vector2(238, -76)
 
 [node name="front_paper_bin" parent="." instance=ExtResource("3_qjfgi")]
 light_mask = 4
