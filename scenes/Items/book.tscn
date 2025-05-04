@@ -1,22 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://b56m6qj0xfu7b"]
+[gd_scene load_steps=5 format=3 uid="uid://ckvvenw7x3lr6"]
 
-[ext_resource type="Script" uid="uid://dp7hru4jv6r3r" path="res://scripts/Items/Item.gd" id="1_nmqre"]
-[ext_resource type="Texture2D" uid="uid://dcnfm5d4c0mkr" path="res://assets/Items.png" id="2_kt7qc"]
-[ext_resource type="FontFile" uid="uid://d0qe8c1rsiu30" path="res://assets/Font/Minecraft.ttf" id="3_h2fco"]
+[ext_resource type="Script" uid="uid://dp7hru4jv6r3r" path="res://scripts/Items/Item.gd" id="1_1r3xc"]
+[ext_resource type="Texture2D" uid="uid://dcnfm5d4c0mkr" path="res://assets/Items.png" id="2_kpgyg"]
+[ext_resource type="FontFile" uid="uid://d0qe8c1rsiu30" path="res://assets/Font/Minecraft.ttf" id="3_1sp07"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cod46"]
 
-[node name="takeout" type="Area2D"]
-script = ExtResource("1_nmqre")
+[node name="book" type="Area2D"]
+script = ExtResource("1_1r3xc")
 item_type = 2
-animation_prefix = "takeout"
+animation_prefix = "book"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(4.76837e-07, 0)
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("2_kt7qc")
+texture = ExtResource("2_kpgyg")
 region_enabled = true
-region_rect = Rect2(39, 38, 19, 19)
+region_rect = Rect2(70, 70, 21, 19)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_cod46")
@@ -27,7 +27,7 @@ offset_left = -62.0
 offset_top = -33.0
 offset_right = 68.0
 offset_bottom = -17.0
-theme_override_fonts/font = ExtResource("3_h2fco")
+theme_override_fonts/font = ExtResource("3_1sp07")
 text = "Space to pick up"
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

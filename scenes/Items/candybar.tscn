@@ -10,6 +10,7 @@ radius = 6.0
 [node name="candybar" type="Area2D"]
 script = ExtResource("1_pph6w")
 item_type = 1
+animation_prefix = "candybar"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(4.76837e-07, 0)

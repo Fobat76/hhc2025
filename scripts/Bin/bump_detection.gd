@@ -11,5 +11,14 @@ func _on_body_entered(body):
 			print("✅ Correct")
 		else:
 			print("❌ Wrong")
-
+			shake()
 		body.held_item_type = -1
+
+func shake():
+	var parent = get_parent()
+	var original_pos = parent.position
+	var tween = parent.create_tween()
+	tween.tween_property(parent, "position", original_pos + Vector2(5, 0), 0.05)
+	tween.tween_property(parent, "position", original_pos - Vector2(5, 0), 0.05)
+	tween.tween_property(parent, "position", original_pos + Vector2(3, 0), 0.05)
+	tween.tween_property(parent, "position", original_pos, 0.05)

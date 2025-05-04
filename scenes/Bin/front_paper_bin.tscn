@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://betupkbiwlaqc"]
 
-[ext_resource type="Texture2D" uid="uid://duauh6hpm2ctl" path="res://assets/BuildingBlocks.png" id="1_d35qk"]
+[ext_resource type="Texture2D" uid="uid://d1myreqprgtpr" path="res://assets/BuildingBlocks.png" id="1_d35qk"]
 [ext_resource type="Script" uid="uid://bgwv28x4nagdi" path="res://scripts/Bin/bump_detection.gd" id="3_lhb1d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_25m10"]
