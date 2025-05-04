@@ -1,8 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://cl5yel1ffx4et"]
+[gd_scene load_steps=12 format=4 uid="uid://cl5yel1ffx4et"]
 
 [ext_resource type="Texture2D" uid="uid://d1myreqprgtpr" path="res://assets/BuildingBlocks.png" id="1_xq6p0"]
-[ext_resource type="PackedScene" uid="uid://b5fm3lh0o36ox" path="res://scenes/Player/player.tscn" id="2_djuqw"]
+[ext_resource type="Script" uid="uid://bw3qlfx8gq32q" path="res://scripts/Levels/level_1.gd" id="1_ylpj7"]
+[ext_resource type="PackedScene" uid="uid://cit3jqa4skns1" path="res://scenes/Player/player.tscn" id="2_djuqw"]
 [ext_resource type="PackedScene" uid="uid://cdreegaac4t62" path="res://scenes/Bin/front_Ewaste_bin.tscn" id="3_2bxmg"]
+[ext_resource type="PackedScene" uid="uid://0l8qyrnck2q7" path="res://scenes/Player/HUD.tscn" id="4_a4rx7"]
+[ext_resource type="PackedScene" uid="uid://du0ma751dwg3c" path="res://scenes/itemSpawn.tscn" id="4_ar5rt"]
 [ext_resource type="PackedScene" uid="uid://ddfk5nptnbkyp" path="res://scenes/Bin/front_metal_bin.tscn" id="4_c6375"]
 [ext_resource type="PackedScene" uid="uid://dtr4b7kalws1m" path="res://scenes/Bin/front_plastic_bin.tscn" id="5_ylpj7"]
 [ext_resource type="PackedScene" uid="uid://betupkbiwlaqc" path="res://scenes/Bin/front_paper_bin.tscn" id="6_ar5rt"]
@@ -94,6 +97,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_xq6p0")
 
 [node name="Level1" type="Node2D"]
+script = ExtResource("1_ylpj7")
 
 [node name="Layer0" type="TileMapLayer" parent="."]
 use_parent_material = true
@@ -102,6 +106,13 @@ tile_map_data = PackedByteArray("AAD7//v/AAADAAAAAAD8//v/AAADAAAAAAD9//v/AAADAAA
 tile_set = SubResource("TileSet_imish")
 
 [node name="Player" parent="." instance=ExtResource("2_djuqw")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Hud" parent="CanvasLayer" instance=ExtResource("4_a4rx7")]
+
+[node name="ItemSpawn" parent="." instance=ExtResource("4_ar5rt")]
+position = Vector2(145, 80)
 
 [node name="front_Ewaste_bin" parent="." instance=ExtResource("3_2bxmg")]
 position = Vector2(65, 11)
