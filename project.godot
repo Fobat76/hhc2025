@@ -13,7 +13,7 @@ config_version=5
 config/name="HH2025"
 run/main_scene="uid://bs2y5eaj8st6p"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://by04dbsoaj2td"
 
 [autoload]
 
