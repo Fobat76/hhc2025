@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dwxj6iri3rjlk" path="res://assets/howToPages/howToPage1.png" id="2_d30lr"]
 [ext_resource type="Texture2D" uid="uid://deih3wp7igwq4" path="res://assets/howToPages/howToPage2.png" id="3_mnpch"]
 [ext_resource type="Texture2D" uid="uid://dpo8e6trilmiw" path="res://assets/howToPages/howToPage3.png" id="4_u8l6h"]
-[ext_resource type="Texture2D" uid="uid://dlwokpbu1b8ty" path="res://assets/howToPages/howToPage4.png" id="5_yqcbg"]
+[ext_resource type="Texture2D" uid="uid://dwm4motpwrptb" path="res://assetPackForMove/h2p/4.png" id="5_d30lr"]
 
 [node name="Options" type="Control"]
 layout_mode = 3
@@ -45,6 +45,7 @@ offset_top = -1.0
 offset_right = 325.0
 offset_bottom = 179.0
 texture = ExtResource("5_yqcbg")
+
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
