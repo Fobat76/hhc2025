@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://buhmuwte1lbfx"]
+
+[ext_resource type="Script" uid="uid://donyl5cxw5kge" path="res://scripts/Conveyor/item_holder.gd" id="1_rgnhq"]
+
+[node name="ItemHolder" type="Node2D"]
+script = ExtResource("1_rgnhq")
