@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://bv58r7fq2f1cq"]
+[gd_scene load_steps=19 format=4 uid="uid://bv58r7fq2f1cq"]
 
 [ext_resource type="Texture2D" uid="uid://d1myreqprgtpr" path="res://assets/BuildingBlocks.png" id="1_420oj"]
 [ext_resource type="Script" uid="uid://omejm6soa4r2" path="res://scripts/Levels/level_4.gd" id="1_mvrs0"]
@@ -9,6 +9,13 @@
 [ext_resource type="PackedScene" uid="uid://dtr4b7kalws1m" path="res://scenes/Bin/front_plastic_bin.tscn" id="4_mvrs0"]
 [ext_resource type="PackedScene" uid="uid://betupkbiwlaqc" path="res://scenes/Bin/front_paper_bin.tscn" id="5_j41po"]
 [ext_resource type="PackedScene" uid="uid://b5fm3lh0o36ox" path="res://scenes/Player/player.tscn" id="6_eh24d"]
+[ext_resource type="PackedScene" uid="uid://c2tl0cfm71u1d" path="res://scenes/conveyor.tscn" id="10_sp7y5"]
+[ext_resource type="PackedScene" uid="uid://d2uhjqedbqvbx" path="res://scenes/conveyor2.tscn" id="11_ivkdx"]
+[ext_resource type="PackedScene" uid="uid://e7xwktlaueo1" path="res://scenes/conveyor3.tscn" id="12_hx844"]
+[ext_resource type="Texture2D" uid="uid://brol4tmgl1o6n" path="res://assets/Tubes/Tubes.png" id="13_5y5g1"]
+[ext_resource type="Texture2D" uid="uid://2lpywasewym0" path="res://assets/Tubes/6.png" id="14_wa37i"]
+[ext_resource type="Texture2D" uid="uid://tte8uj024yvp" path="res://assets/Tubes/7.png" id="15_7prd7"]
+[ext_resource type="Texture2D" uid="uid://dy8661afr2fv5" path="res://assets/Tubes/8.png" id="16_kvasq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gogsv"]
 texture = ExtResource("1_420oj")
@@ -131,10 +138,10 @@ tile_set = SubResource("TileSet_2nee8")
 [node name="Hud" parent="CanvasLayer" instance=ExtResource("3_gogsv")]
 
 [node name="Player" parent="." instance=ExtResource("6_eh24d")]
-position = Vector2(30, 63)
+position = Vector2(145, 182)
 
 [node name="ItemSpawn" parent="." instance=ExtResource("4_j41po")]
-position = Vector2(2, 16)
+position = Vector2(143, 145)
 
 [node name="front_Ewaste_bin" parent="." instance=ExtResource("2_a42tr")]
 position = Vector2(370, 13)
@@ -147,3 +154,59 @@ position = Vector2(15, 224)
 
 [node name="front_paper_bin" parent="." instance=ExtResource("5_j41po")]
 position = Vector2(371, 218)
+
+[node name="Conveyor" parent="." instance=ExtResource("10_sp7y5")]
+position = Vector2(17, 17)
+
+[node name="Conveyor2" parent="." instance=ExtResource("10_sp7y5")]
+position = Vector2(49, 17)
+
+[node name="Conveyor3" parent="." instance=ExtResource("10_sp7y5")]
+position = Vector2(81, 17)
+
+[node name="Conveyor4" parent="." instance=ExtResource("10_sp7y5")]
+position = Vector2(113, 17)
+
+[node name="Conveyor5" parent="." instance=ExtResource("11_ivkdx")]
+position = Vector2(145, 17)
+
+[node name="Conveyor6" parent="." instance=ExtResource("12_hx844")]
+position = Vector2(145, 50)
+
+[node name="Conveyor7" parent="." instance=ExtResource("12_hx844")]
+position = Vector2(145, 82)
+
+[node name="Conveyor8" parent="." instance=ExtResource("12_hx844")]
+position = Vector2(145, 114)
+
+[node name="Tubes" type="Sprite2D" parent="."]
+position = Vector2(14, -31)
+texture = ExtResource("13_5y5g1")
+
+[node name="6" type="Sprite2D" parent="."]
+position = Vector2(42, -45)
+texture = ExtResource("14_wa37i")
+
+[node name="7" type="Sprite2D" parent="."]
+position = Vector2(10, -43)
+texture = ExtResource("15_7prd7")
+
+[node name="8" type="Sprite2D" parent="."]
+position = Vector2(84, -45)
+texture = ExtResource("14_wa37i")
+
+[node name="11" type="Sprite2D" parent="."]
+position = Vector2(169, -45)
+texture = ExtResource("14_wa37i")
+
+[node name="12" type="Sprite2D" parent="."]
+position = Vector2(209, -45)
+texture = ExtResource("14_wa37i")
+
+[node name="10" type="Sprite2D" parent="."]
+position = Vector2(236, -43)
+texture = ExtResource("16_kvasq")
+
+[node name="9" type="Sprite2D" parent="."]
+position = Vector2(127, -45)
+texture = ExtResource("14_wa37i")

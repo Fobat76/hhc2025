@@ -1,0 +1,54 @@
+[gd_scene load_steps=10 format=3 uid="uid://e7xwktlaueo1"]
+
+[ext_resource type="Script" uid="uid://oxelfdavjmws" path="res://scripts/Conveyor/conveyor.gd" id="1_xebgv"]
+[ext_resource type="Texture2D" uid="uid://d1myreqprgtpr" path="res://assets/BuildingBlocks.png" id="2_73bq6"]
+[ext_resource type="PackedScene" uid="uid://b8ry0ac7ln58" path="res://scenes/detector.tscn" id="3_xy7y1"]
+[ext_resource type="PackedScene" uid="uid://buhmuwte1lbfx" path="res://scenes/item_holder.tscn" id="4_0woyq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_crbfm"]
+size = Vector2(32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xebgv"]
+atlas = ExtResource("2_73bq6")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73bq6"]
+atlas = ExtResource("2_73bq6")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xy7y1"]
+atlas = ExtResource("2_73bq6")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t4je2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xebgv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73bq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xy7y1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Conveyor" type="Area2D"]
+monitoring = false
+script = ExtResource("1_xebgv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_crbfm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_t4je2")
+
+[node name="Detector" parent="." instance=ExtResource("3_xy7y1")]
+script = null
+
+[node name="ItemHolder" parent="." instance=ExtResource("4_0woyq")]
+script = null

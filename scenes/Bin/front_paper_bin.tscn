@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://betupkbiwlaqc"]
+[gd_scene load_steps=7 format=3 uid="uid://betupkbiwlaqc"]
 
 [ext_resource type="Texture2D" uid="uid://d1myreqprgtpr" path="res://assets/BuildingBlocks.png" id="1_d35qk"]
+[ext_resource type="AudioStream" uid="uid://cpe0qa8mglwpi" path="res://assets/sfx/Sucess.wav" id="3_533ya"]
 [ext_resource type="Script" uid="uid://bgwv28x4nagdi" path="res://scripts/Bin/bump_detection.gd" id="3_lhb1d"]
+[ext_resource type="AudioStream" uid="uid://qke2a730vqq5" path="res://assets/sfx/Unsucess.wav" id="4_6sdhl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_25m10"]
 size = Vector2(26, 7)
@@ -29,5 +31,11 @@ bin_type = 2
 visible = false
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_d35qk")
+
+[node name="CorrectSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_533ya")
+
+[node name="WrongSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_6sdhl")
 
 [connection signal="body_entered" from="BumpDetection" to="BumpDetection" method="_on_body_entered"]
