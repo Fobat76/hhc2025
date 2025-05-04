@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cpmgumy0rh8cu" path="res://scenes/Items/plastic_bottle.tscn" id="10_wp2t3"]
 [ext_resource type="PackedScene" uid="uid://b56m6qj0xfu7b" path="res://scenes/Items/takeout.tscn" id="12_31r7n"]
 [ext_resource type="PackedScene" uid="uid://b38gib5ln4ggw" path="res://scenes/Items/candybar.tscn" id="13_1tu8g"]
-[ext_resource type="PackedScene" path="res://scenes/Items/cardboard.tscn" id="14_1tu8g"]
+[ext_resource type="PackedScene" uid="uid://ccr3hwr3un2kt" path="res://scenes/Items/cardboard.tscn" id="14_1tu8g"]
 [ext_resource type="PackedScene" path="res://scenes/Items/newspaper.tscn" id="15_vtflf"]
 [ext_resource type="PackedScene" path="res://scenes/Items/book.tscn" id="16_vaa3h"]
 [ext_resource type="PackedScene" path="res://scenes/Items/test.tscn" id="17_p4adi"]
@@ -25,7 +25,7 @@
 [node name="TestLevel" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_qjfgi")]
-position = Vector2(238, -76)
+position = Vector2(18, -57)
 
 [node name="front_paper_bin" parent="." instance=ExtResource("3_qjfgi")]
 light_mask = 4
@@ -72,19 +72,19 @@ position = Vector2(-35, 30)
 position = Vector2(-32, 72)
 
 [node name="book" parent="." instance=ExtResource("16_vaa3h")]
-position = Vector2(-29, -35)
+position = Vector2(-34, -25)
 
 [node name="bmo" parent="." instance=ExtResource("18_t48v5")]
-position = Vector2(157, -95)
+position = Vector2(-34, 97)
 
 [node name="homework" parent="." instance=ExtResource("17_p4adi")]
-position = Vector2(48, -30)
+position = Vector2(86, -16)
 
 [node name="monitor" parent="." instance=ExtResource("19_qfsc6")]
-position = Vector2(293, -74)
+position = Vector2(-39, 133)
 
 [node name="phone" parent="." instance=ExtResource("20_d18do")]
-position = Vector2(270, -39)
+position = Vector2(-23, 169)
 
 [node name="camera" parent="." instance=ExtResource("21_yds6m")]
-position = Vector2(346, -101)
+position = Vector2(34, 67)
