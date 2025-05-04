@@ -6,12 +6,15 @@
 [node name="ExtraCredits" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+mouse_filter = 1
 script = ExtResource("1_daphc")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 325.0
+offset_bottom = 180.0
 mouse_filter = 2
 texture = ExtResource("2_sa5ko")
 
