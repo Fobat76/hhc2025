@@ -60,6 +60,7 @@ texture = ExtResource("2_6u4ni")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 z_index = 5
+layout_mode = 0
 offset_left = -18.0
 offset_top = 6.0
 offset_right = 90.0

@@ -15,12 +15,10 @@ func update_spawned_items(string : String):
 
 func _on_wrong():
 	if incorrect.text.length() - 7 == 2:
-		print("move to lose scene") #Hey Darren Change Me!
+		get_tree().change_scene_to_file("res://scenes/lose.tscn") 
 	else:
 		incorrect.text += "X"
 		track += 1
 
 func _on_insert():
 	track += 1
-	
-	
