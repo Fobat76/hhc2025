@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://coevmsl54ryoc"]
+[gd_scene load_steps=7 format=3 uid="uid://coevmsl54ryoc"]
 
 [ext_resource type="Script" uid="uid://c7sx34pq61r44" path="res://scripts/Main Menu/level_selection.gd" id="1_ow82o"]
+[ext_resource type="Texture2D" uid="uid://3je5wuwlsn4x" path="res://assets/mainMenuBackgrounds/unblurredLevel1.png" id="2_6u4ni"]
+[ext_resource type="Texture2D" uid="uid://bckk002h2t8of" path="res://assets/mainMenuBackgrounds/blurredLevel4.png" id="2_wddgw"]
+[ext_resource type="Texture2D" uid="uid://bq2omvsot3frk" path="res://assets/mainMenuBackgrounds/blurredLevel3.png" id="3_a33mh"]
+[ext_resource type="Texture2D" uid="uid://bjkmv3dra1rbg" path="res://assets/mainMenuBackgrounds/blurredLevel2.png" id="4_2h2ip"]
+[ext_resource type="Texture2D" uid="uid://b1gef04ad3u3v" path="res://assets/mainMenuBackgrounds/blurredLevel1.png" id="5_bcwrm"]
 
 [node name="LevelSelection" type="Control"]
 layout_mode = 3
@@ -9,33 +14,79 @@ offset_left = 188.0
 offset_right = 188.0
 script = ExtResource("1_ow82o")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="Level4Blurred" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
-offset_right = 150.0
-offset_bottom = 31.0
+offset_left = -61.0
+offset_top = -1.0
+offset_right = 132.0
+offset_bottom = 179.0
+texture = ExtResource("2_wddgw")
 
-[node name="Button" type="Button" parent="HBoxContainer"]
+[node name="Level3Blurred" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -61.0
+offset_top = -1.0
+offset_right = 132.0
+offset_bottom = 179.0
+texture = ExtResource("3_a33mh")
+
+[node name="Level2Blurred" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -61.0
+offset_top = -1.0
+offset_right = 132.0
+offset_bottom = 179.0
+texture = ExtResource("4_2h2ip")
+
+[node name="Level1Blurred" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -61.0
+offset_top = -1.0
+offset_right = 132.0
+offset_bottom = 179.0
+texture = ExtResource("5_bcwrm")
+
+[node name="Level1Unblurred" type="TextureRect" parent="."]
+z_index = -2
+layout_mode = 0
+offset_left = -61.0
+offset_right = 132.0
+offset_bottom = 180.0
+texture = ExtResource("2_6u4ni")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+z_index = 5
+offset_left = -18.0
+offset_top = 6.0
+offset_right = 90.0
+offset_bottom = 37.0
+
+[node name="GoLevel1" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 text = "1"
 
-[node name="Button2" type="Button" parent="HBoxContainer"]
+[node name="GoLevel2" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 text = "2"
 
-[node name="Button3" type="Button" parent="HBoxContainer"]
+[node name="GoLevel3" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 text = "3"
 
-[node name="Button4" type="Button" parent="HBoxContainer"]
+[node name="GoLevel4" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 text = "4"
 
-[node name="Button5" type="Button" parent="HBoxContainer"]
+[node name="GoLevel5" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 text = "5"
 
-[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button3" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button4" to="." method="_on_button_4_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="HBoxContainer/GoLevel1" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/GoLevel2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/GoLevel3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="HBoxContainer/GoLevel4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="HBoxContainer/GoLevel5" to="." method="_on_button_5_pressed"]
