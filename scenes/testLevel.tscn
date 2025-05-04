@@ -17,7 +17,6 @@
 [node name="TestLevel" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_qjfgi")]
-top_level = true
 
 [node name="front_paper_bin" parent="." instance=ExtResource("3_qjfgi")]
 light_mask = 4
