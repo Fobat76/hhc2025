@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2tl0cfm71u1d"]
+
+[ext_resource type="Script" uid="uid://oxelfdavjmws" path="res://scripts/Conveyor/conveyor.gd" id="1_osxxb"]
+[ext_resource type="Texture2D" uid="uid://d1myreqprgtpr" path="res://assets/BuildingBlocks.png" id="2_54w8r"]
+[ext_resource type="PackedScene" uid="uid://b8ry0ac7ln58" path="res://scenes/detector.tscn" id="3_ruvuk"]
+[ext_resource type="PackedScene" uid="uid://buhmuwte1lbfx" path="res://scenes/item_holder.tscn" id="4_t4je2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_crbfm"]
+size = Vector2(32, 32)
+
+[node name="Conveyor" type="Area2D"]
+monitoring = false
+script = ExtResource("1_osxxb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_crbfm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_54w8r")
+region_enabled = true
+region_rect = Rect2(0, 32, 32, 32)
+
+[node name="Detector" parent="." instance=ExtResource("3_ruvuk")]
+
+[node name="ItemHolder" parent="." instance=ExtResource("4_t4je2")]
