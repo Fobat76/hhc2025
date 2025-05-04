@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs2y5eaj8st6p"]
+[gd_scene load_steps=6 format=3 uid="uid://bs2y5eaj8st6p"]
 
 [ext_resource type="Script" uid="uid://bet1h166tl7no" path="res://scripts/Main Menu/menu.gd" id="1_23fyw"]
+[ext_resource type="Texture2D" uid="uid://3je5wuwlsn4x" path="res://assets/mainMenuBackgrounds/unblurredLevel1.png" id="2_x4rt1"]
 [ext_resource type="PackedScene" uid="uid://coevmsl54ryoc" path="res://scenes/Main Menu/Level_Selection.tscn" id="2_xlwsp"]
 [ext_resource type="Texture2D" uid="uid://k3qauhqk8gpq" path="res://assets/mainMenuButtons.png" id="3_xlwsp"]
 [ext_resource type="AudioStream" uid="uid://dudtx6wi38opd" path="res://assets/music/Menu.mp3" id="4_a5w65"]
@@ -18,7 +19,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_23fyw")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Level1Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 132.0
+offset_top = -1.0
+offset_right = 325.0
+offset_bottom = 179.0
+texture = ExtResource("2_x4rt1")
+
+[node name="MainMenuButtons" type="TextureRect" parent="."]
 z_index = -1
 layout_mode = 0
 offset_left = 5.0

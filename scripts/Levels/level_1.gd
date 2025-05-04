@@ -3,8 +3,7 @@ extends Node2D
 const numberOfItems = 5
 var curNum = 0
 
-func _ready():
-	
+func _ready():	
 	while curNum != numberOfItems:
 		while get_tree().paused == true:
 			await get_tree().create_timer(3).timeout

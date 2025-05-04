@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d1myreqprgtpr" path="res://assets/BuildingBlocks.png" id="1_c8rkg"]
 [ext_resource type="Script" uid="uid://biemxf2jl3pxr" path="res://scripts/Levels/level_5.gd" id="1_udijn"]
-[ext_resource type="PackedScene" uid="uid://cit3jqa4skns1" path="res://scenes/Player/player.tscn" id="2_ubtaq"]
+[ext_resource type="PackedScene" uid="uid://b5fm3lh0o36ox" path="res://scenes/Player/player.tscn" id="2_ubtaq"]
 [ext_resource type="PackedScene" uid="uid://du0ma751dwg3c" path="res://scenes/itemSpawn.tscn" id="3_ufkmv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_udijn"]
