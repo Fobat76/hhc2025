@@ -3,14 +3,16 @@ extends Area2D
 
 func _on_body_entered(body):
 	if not body.is_in_group("player"):
-		print("nothing")
+		#print("nothing")
 		return  # Don't do anything if it's not the player
 
 	if body.held_item_type != -1:
 		if body.held_item_type == bin_type:
-			print("✅ Correct")
+			#print("✅ Correct")
+			global.emit_signal("on_insert")
 		else:
-			print("❌ Wrong")
+			#print("❌ Wrong")
+			global.emit_signal("on_wrong")
 			shake()
 		body.held_item_type = -1
 

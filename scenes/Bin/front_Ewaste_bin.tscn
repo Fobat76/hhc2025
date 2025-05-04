@@ -21,7 +21,7 @@ position = Vector2(0, -6.5)
 shape = SubResource("RectangleShape2D_25m10")
 debug_color = Color(0.316884, 0.0129155, 0.0763867, 0.42)
 
-[node name="BumpDetection" type="Area2D" parent="."]
+[node name="BumpDetection" type="Area2D" parent="." groups=["Bin"]]
 script = ExtResource("2_tp34f")
 bin_type = 4
 
